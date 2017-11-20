@@ -1,6 +1,20 @@
 <template>
 
-    <div>下拉框</div>
+    <div class="mian_top">
+        <div class="logo_min">
+
+        </div>
+        <ul class="mian_top_right">
+            <ul>
+                <li>1212</li>
+                <li>1212</li>
+                <li>1212</li>
+                <li>锁屏</li>
+
+            </ul>
+        </ul>
+        <div style="clear: both;"></div>
+    </div>
 </template>
 
 <script>

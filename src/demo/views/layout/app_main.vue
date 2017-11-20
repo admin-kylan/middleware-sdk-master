@@ -1,8 +1,14 @@
 <template>
     <section class="app-main" style="min-height: 100%">
-        <transition name="fade" mode="out-in">
-            <router-view :key="key"></router-view>
-        </transition>
+        <div class="page_place">
+            当前位置：<span>首页</span>
+        </div>
+        <div class="mian_zt">
+            <transition name="fade" mode="out-in">
+                <router-view :key="key"></router-view>
+            </transition>
+        </div>
+
     </section>
 </template>
 

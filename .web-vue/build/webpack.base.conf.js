@@ -23,9 +23,7 @@ module.exports = {
         extensions: ['.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            '@': resolve('./src'),
-            'src': resolve(__dirname, './src'),
-            'assets': resolve(__dirname, './src/assets'),
+            '@': resolve('./src/demo'), //demo 目录
             // 'components': path.resolve(__dirname, '../src/components'),
             // 'views': path.resolve(__dirname, '../src/views'),
             // 'styles': path.resolve(__dirname, '../src/styles'),

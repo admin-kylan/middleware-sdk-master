@@ -19,7 +19,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/webpack-configurations.html#white-listing-externals
  */
 let whiteListedModules = ['vue']
-
+function resolve(dir) {
+    return path.join(__dirname, '../', dir)
+}
 let rendererConfig = {
   devtool: '#cheap-module-eval-source-map',
   entry: {
@@ -121,13 +123,14 @@ let rendererConfig = {
   },
   resolve: {
     alias: {
-      '@': path.join(__dirname, '../src/renderer'),
-      'vue$': 'vue/dist/vue.esm.js'
+        'vue$': 'vue/dist/vue.esm.js',
+        '@': resolve('./src/demo'), //demo 目录
     },
     extensions: ['.js', '.vue', '.json', '.css', '.node']
   },
   target: 'electron-renderer'
 }
+
 
 /**
  * Adjust rendererConfig for development settings

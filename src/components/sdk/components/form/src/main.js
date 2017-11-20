@@ -168,7 +168,7 @@ var buildCol = function(span, FormItem) {
 }
 
 module.exports = {
-  name: 'Form',
+  name: 'DForm',
   data: function() {
     return {};
   },
@@ -178,7 +178,8 @@ module.exports = {
     "action",
     "method",
     "layout",
-    "position"
+    "position",
+    "className"
   ],
   created: function() {},
   mounted: function() {},
@@ -204,7 +205,7 @@ module.exports = {
       if (handler == undefined)
         continue;
       var FormControl = handler(formItem, this.form);
-      propMaptoFormItem[formItem.prop] = <FormItem label={formItem.label} prop={formItem.prop}><FormControl/></FormItem>
+      propMaptoFormItem[formItem.prop] = <FormItem class = {formItem.className} label={formItem.label} prop={formItem.prop}><FormControl/></FormItem>
     }
     //设置表单布局
     var rowArr = [];
@@ -225,7 +226,7 @@ module.exports = {
     //   <el-button onClick={this.resetForm}>重置</el-button>
     // </el-form-item>
     return (
-      <el-form label-position={this.position} label-width="130px" rules={rules} model={this.form} ref={this.form}>
+      <el-form class = {this.className} label-position={this.position} label-width="130px" rules={rules} model={this.form} ref={this.form}>
         {rowArr}
       </el-form>
     )

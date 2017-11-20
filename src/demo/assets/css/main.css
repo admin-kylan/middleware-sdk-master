@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+  .login_info{width: 280px;}
+  .register{background-image: url(../images/register_bg2.png)}
+
+}

@@ -1,9 +1,12 @@
 <template>
     <div class="app-wrapper" >
-        <sidebar class="sidebar-container"></sidebar>
+        <!--头部内容-->
+        <sidebar class="mian_top"></sidebar>
         <div class="main-container">
-            <navbar></navbar>
-            <app-main></app-main>
+            <!--左侧内容-->
+            <navbar class="mian_left"></navbar>
+            <!--右侧内容-->
+            <app-main class="mian_right"></app-main>
         </div>
     </div>
 </template>

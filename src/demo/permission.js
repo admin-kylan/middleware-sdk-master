@@ -2,7 +2,7 @@
  * @author  Administrator
  * @date   2017/11/17 10:02
  */
-import router from './router'
+import router from './router/index'
 import { getToken } from '@/utils/auth' // 验权
 
 
